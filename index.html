@@ -1,0 +1,148 @@
+ <!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nilai dalam Pendidikan</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #1abc9c, #16a085);
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        .section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 25px;
+            max-width: 800px;
+            width: 100%;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .title {
+            font-size: 36px;
+            font-weight: 700;
+            color: #1abc9c;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 20px;
+            color: #777;
+            margin-bottom: 20px;
+        }
+
+        .quote {
+            font-size: 26px;
+            font-weight: 600;
+            color: #2c3e50;
+            margin: 30px 0;
+        }
+
+        .author, .date {
+            font-size: 18px;
+            color: #555;
+            margin-top: 5px;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 30px;
+            background: #1abc9c;
+            color: #fff;
+            border: none;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .button:hover {
+            background: #16a085;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .conclusion-text {
+            text-align: justify;
+            font-size: 18px;
+            line-height: 1.6;
+            color: #2c3e50;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <section class="section" id="cover">
+        <div class="card">
+            <div class="title">Kata-kata Perspektif Pendidikan</div>
+            <div class="subtitle">Sebuah Refleksi tentang Nilai dalam Pembelajaran</div>
+            <div class="author">ADITYA PRATAMA</div>
+            <div class="date">MEDAN / 05-02-2025</div>
+            <button class="button" onclick="navigate('content')">Buka Halaman</button>
+        </div>
+    </section>
+
+    <section class="section hidden" id="content">
+        <div class="card">
+            <div class="quote">"Nilai itu bukan dikejar tetapi Nilai itu yang mengejar kita."</div>
+            <div class="author">ADITYA PRATAMA</div>
+            <div class="date">MEDAN / 05-02-2025</div>
+            <button class="button" onclick="navigate('cover')">Kembali</button>
+            <button class="button" onclick="navigate('conclusion')">Lanjut ke Kesimpulan</button>
+        </div>
+    </section>
+
+    <section class="section hidden" id="conclusion">
+        <div class="card">
+            <div class="title">Kesimpulan</div>
+            <div class="conclusion-text">
+                Kutipan ini membawa pesan mendalam tentang esensi sejati pendidikan. Ketika kita fokus pada proses pembelajaran dengan sungguh-sungguh, pemahaman yang mendalam, dan kerja keras yang konsisten, nilai akademik akan datang dengan sendirinya sebagai hasil natural dari dedikasi kita. Ini mengingatkan kita bahwa pendidikan bukan sekadar mengejar angka, tetapi tentang pengembangan diri yang holistik. Ketika kita menjadikan pembelajaran sebagai prioritas utama, prestasi akademik akan mengikuti sebagai konsekuensi alami dari komitmen kita terhadap proses pendidikan yang berkualitas.
+            </div>
+            <div class="author">ADITYA PRATAMA</div>
+            <div class="date">MEDAN / 05-02-2025</div>
+            <button class="button" onclick="navigate('content')">Kembali ke Kutipan</button>
+        </div>
+    </section>
+
+    <script>
+        function navigate(targetId) {
+            document.querySelectorAll('.section').forEach(section => {
+                section.classList.add('hidden');
+            });
+            document.getElementById(targetId).classList.remove('hidden');
+        }
+    </script>
+
+</body>
+</html>
